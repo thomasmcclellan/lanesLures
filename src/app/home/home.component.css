@@ -124,7 +124,7 @@
       height: 100%;
       content: '';
       display: block;
-      opacity: .6;
+      opacity: 0;
       background-color: #000;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
@@ -240,10 +240,5 @@
       font-weight: bold;
       font-family: sans-serif;
       margin-top: 50px;
-      background-color: grey;
       margin-bottom: 0;
-  }
-
-  div.cols{
-      background-color: lightgrey;
   }
