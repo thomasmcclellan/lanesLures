@@ -16,15 +16,19 @@
   }
 
   .viewCartcss{
-      height: 120%;
-      width: auto;
-      position: absolute;
-      padding: 0px;
+    height: 120%;
+    width: auto;
+    position: absolute;
+    padding: 0px;
   }
 
   .viewCarting{
     height: 50px;
     width: auto;
-    position: absolute;
+    float: right !important;
     padding: 0px;
+}
+
+.navbar {
+  margin-bottom: 0px;
 }
