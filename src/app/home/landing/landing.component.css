@@ -6,10 +6,28 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-
-        margin-bottom: 25px;
+        border-bottom: 3px solid lightskyblue;
+        border-top: 3px solid lightskyblue;
     
     }
+
+    .jumbotron {
+  
+          margin-bottom: 75px;
+          margin-top: 75px;
+
+          background-color: #0269CD;
+          text-align: center;
+          border-top: 3px solid lightskyblue;
+          border-bottom: 3px solid lightskyblue;
+      
+      } .jumbotron-text {
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 50px;
+        padding: 30px;
+        color: black;
+      }
     
     .card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -63,9 +81,9 @@
       }
       
       .wrapper{
-        width: 95%;
+        width: 85%;
         margin: 0 auto;
-        background-color: lightblue;
+        background-color: lightskyblue;
       }
       
       .cols{
@@ -107,7 +125,7 @@
           min-height: 280px;
           height: auto;
           border-radius: 10px;
-          border: 1px solid white;
+          border: 3px solid #0269CD;
           color: #fff;
           font-size: 1.5rem;
       }
@@ -244,6 +262,25 @@
           font-weight: bold;
           font-family: sans-serif;
           margin-top: 50px;
-          margin-bottom: 10px;
-          background-color: steelblue;
+          margin-bottom: 30px;
+          background-color: #0269CD;
+          color: black;
+      }
+
+      .btn {
+        padding: 5px;
+      }
+
+      .lureName {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .price {
+        font-size: 20px;
+        padding: 5px;
+      }
+
+      .description {
+        border: 2px solid lightskyblue;
       }

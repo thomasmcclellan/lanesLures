@@ -1,0 +1,18 @@
+.footer {
+    background-color: #0269CD;
+    padding: 50px;
+    margin-top: 75px;
+    color: white;
+    border-top: 3px solid lightskyblue;
+}
+
+.fishy {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 100%;
+}
+
+.rekt {
+    font-size: 23px;
+}
