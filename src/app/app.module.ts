@@ -13,6 +13,11 @@ import { LandingComponent } from './home/landing/landing.component';
 import { ProductsComponent } from './home/products/products.component';
 import { UserComponent } from './home/user/user.component';
 import { CheckoutComponent } from './home/checkout/checkout.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './services/auth.service';
+import { AuthNullGuard } from './services/auth-null-guard.service';
+import { AuthGuard } from './services/auth-guard.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,9 +35,17 @@ import { CheckoutComponent } from './home/checkout/checkout.component';
     CheckoutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthService,
+    AuthGuard,
+    AuthNullGuard
+  ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
