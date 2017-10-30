@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { AuthNullGuard } from './services/auth-null-guard.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DataStorageService } from './services/data-storage.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   providers: [
     AuthService,
     AuthGuard,
-    AuthNullGuard
+    AuthNullGuard,
+    DataStorageService
   ],
   bootstrap: [AppComponent],
   
