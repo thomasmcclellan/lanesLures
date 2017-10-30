@@ -9,7 +9,7 @@ import firebaseConfig from '../../firebaseConfig.js';
 })
 export class AppComponent {
   title = 'app';
-
+  loadedFeature = 'home';
 
   ngOnInit(){
     firebase.initializeApp({
@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   onNavigate(feature: string) {
-    // this.loadedFeature = feature;
+    this.loadedFeature = feature;
   }
 
   onFetchData() {
