@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-4 col-xs-4">
+      <h2>Guest Checkout</h2>
+    </div>
+
+    <div class="col-xs-6">
+      <h4>Shipping Information</h4>
+      <hr>
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname">
+      <br>
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname">
+      <br>
+      <label for="address1">Address 1:</label>
+      <input type="text" name="address1" id="address1">
+      <br>
+      <label for="address2">Address 2:</label>
+      <input type="text" name="address2" id="address2">
+      <br>
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city">
+      <br>
+      <label for="state">State:</label>
+      <input type="text" name="state" id="state">
+      <br>
+      <label for="zip">Zipcode:</label>
+      <input type="number" name="zip" id="zip">
+    </div>
+
+    <div class="col-xs-6">
+      <h4>Billing Information</h4>
+      <hr>
+      <label><input type="checkbox">Check if billing address is the same as shipping address</label>
+      <br>
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname">
+      <br>
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname">
+      <br>
+      <label for="address1">Address 1:</label>
+      <input type="text" name="address1" id="address1">
+      <br>
+      <label for="address2">Address 2:</label>
+      <input type="text" name="address2" id="address2">
+      <br>
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city">
+      <br>
+      <label for="state">State:</label>
+      <input type="text" name="state" id="state">
+      <br>
+      <label for="zip">Zipcode:</label>
+      <input type="number" name="zip" id="zip">
+    </div>
+    <div class="col-xs-12">
+      <h4>Credit Card Information</h4>
+      <hr>
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" id="name">
+      <br>
+      <label for="creditCard">CCN:</label>
+      <input type="text" name="creditCard" id="creditCard">
+      <br>
+      <label for="expiration">Expiration Date:</label>
+      <input type="text" name="expiration" id="expiration">
+      <br>
+      <label for="cvv">CVV:</label>
+      <input type="number" name="cvv" id="cvv">
+    </div>
+
+    <div class="col-xs-12">
+      <button 
+        type="submit" 
+        class="btn btn-primary" 
+      >Submit</button>
+      <a routerLink="/checkout">
+        <button
+          type="button"
+          class="btn btn-danger"
+        >Cancel</button>
+      </a>
+    </div>
+  </div>
+</div>
