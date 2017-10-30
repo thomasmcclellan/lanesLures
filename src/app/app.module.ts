@@ -19,6 +19,7 @@ import { AuthNullGuard } from './services/auth-null-guard.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DataStorageService } from './services/data-storage.service';
+import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-checkout.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DataStorageService } from './services/data-storage.service';
     LandingComponent,
     ProductsComponent,
     UserComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    GuestCheckoutComponent
   ],
   imports: [
     BrowserModule,
