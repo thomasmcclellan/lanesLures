@@ -3,6 +3,7 @@ import { NgForm, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service'
 import * as firebase from 'firebase';
 import { EqualValidator } from './equal-validator.directive';
+import { async } from 'q';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { EqualValidator } from './equal-validator.directive';
 })
 export class SigninComponent implements OnInit {
 
-
+  error: any
   userForm: FormGroup;
   newUser: boolean = true; // to toggle login or signup form
   passReset: boolean = false;
@@ -30,9 +31,12 @@ export class SigninComponent implements OnInit {
     this.auth.createUser(value.email, value.password)
    }
 
-   login(form: NgForm): void {
-    const value = form.value;    
-     this.auth.signinUser(value.email, value.password)
+   async login(form: NgForm) {
+    const value = form.value; 
+    console.log(value)
+    
+    this.error = await this.auth.signinUser(value.email, value.password)
+    console.log(this.error)
    }
 
   //  resetPassword() {

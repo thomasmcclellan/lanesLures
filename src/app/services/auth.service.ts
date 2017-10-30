@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   signinUser(email: string, password: string) {
-      firebase.auth().signInWithEmailAndPassword(email, password)
+  return firebase.auth().signInWithEmailAndPassword(email, password)
       .then(
         response => {
           this.router.navigate(['/home']);
@@ -21,12 +21,19 @@ export class AuthService {
                 this.token = token
               }
             )
+            return
+        }
+      )
+      .catch(
+        response => {
+          console.log(response)
+          return ('Email or password is incorrect')
         }
       )
     }
 
   createUser(email: string, password: string) {
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(res=> {
       this.router.navigate(['/home']);      
       console.log('user created')
@@ -41,7 +48,12 @@ export class AuthService {
         response => {
           this.router.navigate(['/login']);
         }
-      );
+      )
+      .catch(
+        response => {
+          console.log(response)
+        }
+      )
     this.token = null;
   }
 
