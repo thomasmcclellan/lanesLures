@@ -7,8 +7,8 @@ import { HomeComponent } from "./home/home.component";
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'signin', component: SigninComponent}
-//   { path: 'home', component: HomeComponent, canActivate: [AuthNullGuard || AuthGuard]  },
+  { path: 'signin', component: SigninComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 
