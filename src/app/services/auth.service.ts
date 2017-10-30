@@ -1,6 +1,7 @@
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
+import firebaseConfig from '../../../firebaseConfig';
 
 @Injectable()
 export class AuthService {
@@ -23,7 +24,6 @@ export class AuthService {
         }
       )
     }
-  
 
   signout() {
     firebase.auth().signOut()
@@ -49,5 +49,22 @@ export class AuthService {
         resolve(user.uid)
       })
     })    
+  }
+
+  isAuthenticated(uid) {
+    this.uid = uid
+    return this.token != null; 
+  }
+
+  getUID() {
+    return this.uid
+  }
+
+  isAdminAuthenticated(uid) {
+    if (uid == firebaseConfig.adminUIDs[0]){ 
+      return this.token != null;
+    } else {
+      return null;
+    }
   }
 }
