@@ -1,22 +1,38 @@
 <div class="container" id="checkout">
   <div class="row">
-    <div class="col-xs-offset-5 col-xs-2">
-      <h2>Checkout</h2>
-    </div>
-    <div class="col-xs-offset-2 col-xs-8">
+    <h1 style="text-align: center; font-weight: bold;">
+      <img 
+        class="viewCarting" 
+        src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-business/080707-glossy-black-icon-business-cart5.png" 
+        alt="View Cart"
+        style="height: 1.5em;"
+      >Checkout</h1>
+    <div>
       <div class="col-xs-6">
-        <h4>Signin to Account</h4>
+        <h2 style="text-align: center; font-weight: bold;">Signin to Checkout</h2>  
         <hr>
-        <label for="username">Username:</label>
-        <input type="text" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" required>
+        <div style="text-align: center;">
+          <div class="btn-group">
+            <button 
+              class="btn btn-primary dropdown-toggle" 
+              type="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >User Checkout <span class="caret"></span></button>
+            <div class="dropdown-menu userCheckout">
+              <app-signin ></app-signin>
+            </div>
+          </div>
+        </div><br>
       </div>
+
       <div class="col-xs-6">
-        <h4>Checkout as Guest</h4>
+        <h2 style="text-align: center; font-weight: bold;">Checkout as Guest</h2>  
         <hr>
-        <a routerLink='guest-checkout'><button class="btn btn-primary" type="button">Guest Checkout</button></a>
+        <div style="text-align: center;">
+          <a routerLink='guest-checkout'><button class="btn btn-primary" type="button">Guest Checkout</button></a>
+        </div>
       </div>
     </div>
   </div>

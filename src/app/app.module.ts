@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
-import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,6 +19,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DataStorageService } from './services/data-storage.service';
 import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-checkout.component';
+import { UserCheckoutComponent } from './home/checkout/user-checkout/user-checkout.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,6 @@ import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-che
     AdminComponent,
     HomeComponent,
     AuthComponent,
-    SignupComponent,
     SigninComponent,
     NavComponent,
     FooterComponent,
@@ -35,7 +34,8 @@ import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-che
     ProductsComponent,
     UserComponent,
     CheckoutComponent,
-    GuestCheckoutComponent
+    GuestCheckoutComponent,
+    UserCheckoutComponent
   ],
   imports: [
     BrowserModule,

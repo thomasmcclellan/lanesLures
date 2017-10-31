@@ -47,14 +47,14 @@ export class SigninComponent implements OnInit {
    buildForm(): void {
      this.userForm = this.fb.group({
        'email': ['', [
-           Validators.required,
-           Validators.email
+          Validators.required,
+          Validators.email
          ]
        ],
        'signUpEmailConfirm': ['', [
-        Validators.required,
-        Validators.email,
-        EqualValidator
+          Validators.required,
+          Validators.email,
+          EqualValidator
       ]
     ],
        'password': ['', [
