@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { GuestCheckoutComponent } from "./home/checkout/guest-checkout/guest-checkout.component";
 import { AdminComponent } from "./admin/admin.component";
 import { AuthGuard } from "./services/auth-guard.service";
+import { UserCheckoutComponent } from "./home/checkout/user-checkout/user-checkout.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'home', component: HomeComponent },
   { path: 'checkout/guest-checkout', component: GuestCheckoutComponent },
+  { path: 'checkout/user-checkout', component: UserCheckoutComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]}
 ];
 
