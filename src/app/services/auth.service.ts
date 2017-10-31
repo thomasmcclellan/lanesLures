@@ -84,7 +84,7 @@ export class AuthService {
 
   isAdminAuthenticated(uid) {
     if (uid == firebaseConfig.adminUIDs[0]){ 
-      return this.token != null;
+      return true
     } else {
       return null;
     }

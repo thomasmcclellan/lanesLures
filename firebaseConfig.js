@@ -6,6 +6,6 @@ export default {
     storageBucket: "laneslures.appspot.com",
     messagingSenderId: "335287732368",
     adminUIDs: [
-        "placeholder"
+        "iXUm4YrTsIQmFZcJE431WGEolBL2"
     ]
 };
