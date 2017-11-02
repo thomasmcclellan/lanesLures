@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
-import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,6 +21,7 @@ import { DataStorageService } from './services/data-storage.service';
 import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-checkout.component';
 import { NavbarService } from './services/nav.service';
 import { CartService } from './services/cart.service';
+import { UserCheckoutComponent } from './home/checkout/user-checkout/user-checkout.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,6 @@ import { CartService } from './services/cart.service';
     AdminComponent,
     HomeComponent,
     AuthComponent,
-    SignupComponent,
     SigninComponent,
     NavComponent,
     FooterComponent,
@@ -37,7 +36,8 @@ import { CartService } from './services/cart.service';
     ProductsComponent,
     UserComponent,
     CheckoutComponent,
-    GuestCheckoutComponent
+    GuestCheckoutComponent,
+    UserCheckoutComponent
   ],
   imports: [
     BrowserModule,
