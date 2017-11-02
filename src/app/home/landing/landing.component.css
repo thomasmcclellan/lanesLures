@@ -1,7 +1,7 @@
 .banner {
     
         width: 100%;
-        height: 500px;
+        height: 50%;
     
         display: flex;
         flex-flow: row nowrap;
@@ -58,7 +58,9 @@
         perspective: 500px;
     }
     
-    
+    .product {
+      margin-bottom: 10px;
+    }
     
     
     *{
