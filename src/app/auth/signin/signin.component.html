@@ -1,3 +1,79 @@
-<p>
-  signin works!
-</p>
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <h3 style="text-align: center; font-weight: bold;">Login</h3>
+    <form (ngSubmit)="login(g)" #g="ngForm">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          ngModel 
+          class="form-control"
+        >
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          ngModel 
+          class="form-control"
+        >
+      </div>
+      <div [hidden]='!error' class="alert alert-danger">{{ error }}</div>  
+      <button 
+        class="btn btn-primary" 
+        type="submit"
+      >Login</button>
+    </form>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <h3 style="text-align: center; font-weight: bold;">Signup</h3>
+    <!-- <form (ngSubmit)="signup(f)" #f="ngForm"> -->
+    <form [formGroup]='userForm' #f="ngForm" (ngSubmit)="signup(f)">        
+      <div class="form-group">
+          <label for="signUpEmail">Email:</label>
+          <input name='signUpEmail'
+            type="email"
+            formControlName="email" 
+            required 
+            class="form-control" >
+      </div>
+      <div class="alert alert-danger" *ngIf="formErrors.email">
+        {{ formErrors.email }}
+      </div>
+      <div class="form-group">
+          <label for="signUpEmailConfirm">Confirm Email:</label>
+          <input name='signUpEmailConfirm' type="email"
+            required 
+            validateEqual='signUpEmail'
+            formControlName='signUpEmailConfirm'
+            class="form-control">
+      </div>
+      <div class="alert alert-danger" *ngIf="formErrors.signUpEmailConfirm">
+        {{ formErrors.signUpEmailConfirm }}
+      </div>      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password"
+          formControlName="password" 
+          required 
+          class="form-control">
+      </div>
+      <div class="alert alert-danger" *ngIf="formErrors.password">
+        {{ formErrors.password }}
+      </div>      
+      <button 
+        class="btn btn-primary" 
+        type="submit"
+        [disabled]='!userForm.valid'
+      >Signup</button>
+  </form>
+</div>
+</div>

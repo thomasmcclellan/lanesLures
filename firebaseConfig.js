@@ -4,5 +4,8 @@ export default {
     databaseURL: "https://laneslures.firebaseio.com",
     projectId: "laneslures",
     storageBucket: "laneslures.appspot.com",
-    messagingSenderId: "335287732368"
+    messagingSenderId: "335287732368",
+    adminUIDs: [
+        "iXUm4YrTsIQmFZcJE431WGEolBL2"
+    ]
 };
