@@ -7,7 +7,7 @@
     <div class="cols">
               <div class="col" ontouchstart="this.classList.toggle('hover');">
                   <div class="container">
-                      <div class="front" style="background-image: url(https://static.pexels.com/photos/39854/fisherman-fishing-reel-river-39854.jpeg">
+                      <div class="front">
                           <div class="inner">
 
                           </div>
@@ -21,7 +21,7 @@
               </div>
               <div class="col" ontouchstart="this.classList.toggle('hover');">
                   <div class="container">
-                      <div class="front" style="background-image: url(https://static.pexels.com/photos/39854/fisherman-fishing-reel-river-39854.jpeg">
+                      <div class="front">
                           <div class="inner">
 
                           </div>
@@ -35,7 +35,7 @@
               </div>
               <div class="col" ontouchstart="this.classList.toggle('hover');">
                   <div class="container">
-                      <div class="front" style="background-image: url(https://static.pexels.com/photos/39854/fisherman-fishing-reel-river-39854.jpeg">
+                      <div class="front">
                           <div class="inner">
 
                           </div>
@@ -58,22 +58,22 @@
         </div>
 
         <h1 class='midTitle'>Lures</h1>
-        <div class="cols">
-            <div class="col" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(https://unsplash.it/504/504/">
-                        <div class="inner">
-                            <p class="lureName">Lure Name</p>
+        <div class="row">
+                <a class="col-xs-12 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
+                    <div class="container product">
+                        <div class="front" id='{{product.id}}' [style.background-image]='getBackground(product.productImage)'> <!-- angular has protections for variables as product image. must use getBackground to scrub -->
+                            <div class="inner">
+                                <p class="lureName">{{product.productName}}</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p class="description">{{product.productDescription}}</p>
+                                <p class="price">{{product.productPrice}}</p>
+                                <button (click)='addToCart(product.id)'class="btn btn-primary">Add To Cart</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p class="description">Description</p>
-                            <p class="price">Price</p>
-                            <button class="btn btn-primary">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </a>
         </div>
     </div>

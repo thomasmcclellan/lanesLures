@@ -68,7 +68,8 @@ export class AuthService {
   getID() {
     return new Promise((resolve, reject) =>{
       firebase.auth().onAuthStateChanged((user) => {
-        resolve(user.uid)
+        if (user) {resolve(user.uid)}
+        else {this.router.navigate(['home'])}
       })
     })    
   }
@@ -84,8 +85,11 @@ export class AuthService {
 
   isAdminAuthenticated(uid) {
     if (uid == firebaseConfig.adminUIDs[0]){ 
+      console.log('true')
       return true
     } else {
+      console.log('false')
+      this.router.navigate(['home'])      
       return null;
     }
   }

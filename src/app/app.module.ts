@@ -20,6 +20,8 @@ import { AuthGuard } from './services/auth-guard.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DataStorageService } from './services/data-storage.service';
 import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-checkout.component';
+import { NavbarService } from './services/nav.service';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-che
     AuthService,
     AuthGuard,
     AuthNullGuard,
-    DataStorageService
+    DataStorageService,
+    NavbarService,
+    CartService
   ],
   bootstrap: [AppComponent],
   
