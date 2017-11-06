@@ -31,6 +31,10 @@ export class LandingComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`)
   }
 
+  onSelected() {
+    alert ('Thank you for your order!')
+  }
+
   addToCart(key, quantity) {
     let newProduct = this.products.find(x => x.id == key)
     newProduct.quantity = quantity
