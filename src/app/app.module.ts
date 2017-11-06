@@ -22,6 +22,8 @@ import { GuestCheckoutComponent } from './home/checkout/guest-checkout/guest-che
 import { NavbarService } from './services/nav.service';
 import { CartService } from './services/cart.service';
 import { UserCheckoutComponent } from './home/checkout/user-checkout/user-checkout.component';
+import { CartComponent } from './home/cart/cart.component';
+import { OnlyNumber } from './home/landing/number-validator.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { UserCheckoutComponent } from './home/checkout/user-checkout/user-checko
     UserComponent,
     CheckoutComponent,
     GuestCheckoutComponent,
-    UserCheckoutComponent
+    UserCheckoutComponent,
+    CartComponent,
+    OnlyNumber
   ],
   imports: [
     BrowserModule,

@@ -59,7 +59,7 @@
 
         <h1 class='midTitle'>Lures</h1>
         <div class="row">
-                <a class="col-xs-12 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
+                <a class="col-xs-12 col-md-4 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
                     <div class="container product">
                         <div class="front" id='{{product.id}}' [style.background-image]='getBackground(product.productImage)'> <!-- angular has protections for variables as product image. must use getBackground to scrub -->
                             <div class="inner">
@@ -70,7 +70,8 @@
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
                                 <p class="price">{{product.productPrice}}</p>
-                                <button (click)='addToCart(product.id)'class="btn btn-primary">Add To Cart</button>
+                                <input #quantity name='quantity' style='color: black' OnlyNumber="true" />
+                                <button (click)='addToCart(product.id, quantity.value)'class="btn btn-primary">Add To Cart</button>
                             </div>
                         </div>
                     </div>
