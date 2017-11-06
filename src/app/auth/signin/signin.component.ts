@@ -27,16 +27,13 @@ export class SigninComponent implements OnInit {
    }
    signup(form: NgForm): void {
     const value = form.value;
-    console.log(value)
     this.auth.createUser(value.email, value.password)
    }
 
    async login(form: NgForm) {
     const value = form.value; 
-    console.log(value)
     
     this.error = await this.auth.signinUser(value.email, value.password)
-    console.log(this.error)
    }
 
   //  resetPassword() {

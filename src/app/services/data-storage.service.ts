@@ -23,8 +23,6 @@ export class DataStorageService {
             productPrice: objects[key].price
           })
         }
-        console.log('here')
-        console.log(products)
         return products
       }
       )

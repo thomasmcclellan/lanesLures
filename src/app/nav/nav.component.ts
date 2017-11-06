@@ -24,4 +24,9 @@ export class NavComponent implements OnInit {
       })
   }
 
+  onSignout() {
+    this.authService.signout();
+    window.location.reload();
+  }
+
 }

@@ -13,12 +13,22 @@
         <hr>
         <div style="text-align: center;">
           <div class="btn-group">
-            <button 
-              class="btn btn-primary dropdown-toggle" 
-              type="button"
-              data-toggle="modal"
-              data-target="#userModal"
-            >User Checkout</button>
+            <ng-template [ngIf]="authService.isAuthenticated()">
+              <a routerLink="/checkout/user-checkout">
+                <button 
+                  class="btn btn-primary" 
+                  type="button"
+                >User Checkout</button>
+              </a>
+            </ng-template>
+            <ng-template [ngIf]="!authService.isAuthenticated()">
+              <a routerLink="/signin">
+                <button 
+                  class="btn btn-primary dropdown-toggle" 
+                  type="button"
+                >Sign In</button>
+              </a>
+            </ng-template>
 
             <div class="modal fade" id="userModal" role="dialog">
               <div class="modal-content">
