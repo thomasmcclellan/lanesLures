@@ -2,54 +2,61 @@
   
  
 
-<div class="wrapper">
-    <h1 class='midTitle'>Lures in Action</h1>
+<div class="wrapper-top">
+    <!-- <h1 class='midTitle'>Lures in Action</h1> -->
     <div class="cols">
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front">
-                          <div class="inner">
-
-                          </div>
+              <!-- <div class="col" ontouchstart="this.classList.toggle('hover');"> -->
+                  <div class="row" style="display: flex; margin: 0;">
+                      <div class="col-xs-12 col-md-12">
+                            <div class="container">
+                                <div class="front-top" style="height: 305px;">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back" style="height: 305px;">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
                       </div>
-                      <div class="back">
-                          <div class="inner">
-
-                          </div>
+                      <div class="row" style="margin: 0;">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="container">
+                                <div class="front-top">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
                       </div>
-                  </div>
-              </div>
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front">
-                          <div class="inner">
-
-                          </div>
+                      <div class="col-xs-12 col-md-12">
+                            <div class="container">
+                                <div class="front-top">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                       </div>
-                      <div class="back">
-                          <div class="inner">
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front">
-                          <div class="inner">
-
-                          </div>
-                      </div>
-                      <div class="back">
-                          <div class="inner">
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
+
+              <!-- </div> -->
 
      <div class="wrapper">
 
@@ -70,8 +77,23 @@
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
                                 <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
-                                <input #quantity name='quantity' style='color: black' OnlyNumber="true" />
-                                <button (click)='addToCart(product.id, quantity.value)'class="btn btn-primary">Add To Cart</button>
+                                <br>
+                                <label for="quantity">Quantity:</label>
+                                <input 
+                                  #quantity 
+                                  name='quantity' 
+                                  type="number" 
+                                  style='color: black; width: 3em;' 
+                                  OnlyNumber="true" 
+                                  value="1"
+                                  min="1"
+                                >
+                                <br><br>
+                                <button 
+                                  (click)='addToCart(product.id, quantity.value)'
+                                  (click)='onSelected()'
+                                  class="btn btn-primary"
+                                >Add To Cart</button>
                             </div>
                         </div>
                     </div>
