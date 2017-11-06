@@ -76,9 +76,9 @@
                         <div class="back">
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
-                                <p class="price">{{product.productPrice}}</p>
+                                <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
                                 <br>
-                                <label for="quanitity">Quantity:</label>
+                                <label for="quantity">Quantity:</label>
                                 <input 
                                   #quantity 
                                   name='quantity' 
