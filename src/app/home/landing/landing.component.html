@@ -69,7 +69,7 @@
                         <div class="back">
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
-                                <p class="price">{{product.productPrice}}</p>
+                                <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
                                 <input #quantity name='quantity' style='color: black' OnlyNumber="true" />
                                 <button (click)='addToCart(product.id, quantity.value)'class="btn btn-primary">Add To Cart</button>
                             </div>
