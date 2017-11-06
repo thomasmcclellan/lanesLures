@@ -1,55 +1,108 @@
-<img class="banner" src="../../../assets/images/homepage.png" alt="image">
-  
- 
+<img class="banner" src="../../../assets/images/homepage.png">
 
-<div class="wrapper">
-    <h1 class='midTitle'>Lures in Action</h1>
+
+<div class="wrapper-top">
+    <!-- <h1 class='midTitle'>Lures in Action</h1> -->
     <div class="cols">
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front">
-                          <div class="inner">
-
-                          </div>
+              <!-- <div class="col" ontouchstart="this.classList.toggle('hover');"> -->
+                  <div class="row" style="display: flex; margin: 0;">
+                      <div class="col-xs-12 col-md-12">
+                            <div class="container">
+                                <div class="front-top" style="height: 305px; background-image: url('https://images.pexels.com/photos/102730/pexels-photo-102730.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back-top" style="height: 305px;">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
                       </div>
-                      <div class="back">
-                          <div class="inner">
-
-                          </div>
+                      <div class="row" style="margin: 0;">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="container">
+                                <div class="front-top" style="background-image: url('https://images.pexels.com/photos/192454/pexels-photo-192454.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back-top">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
                       </div>
-                  </div>
-              </div>
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front">
-                          <div class="inner">
-
-                          </div>
+                      <div class="col-xs-12 col-md-12">
+                            <div class="container">
+                                <div class="front-top" style="background-image: url('https://images.pexels.com/photos/386003/pexels-photo-386003.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back-top">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                       </div>
-                      <div class="back">
-                          <div class="inner">
-
-                          </div>
+                    </div>
+                    <div class="row" style="display: flex; margin: 0;">
+                            <div class="col-xs-12 col-md-12">
+                                    <div class="container">
+                                        <div class="front-top" style="background-image: url('https://images.pexels.com/photos/54580/fishing-sunset-british-columbia-catching-fish-54580.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');">
+                                            <div class="inner">
+                      
+                                            </div>
+                                        </div>
+                                        <div class="back-top">
+                                            <div class="inner">
+                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="display: flex; margin: 0;">
+                                        <div class="col-xs-12 col-md-12">
+                                                <div class="container"  style="padding-right:2.5px;">
+                                                    <div class="front-top" style="background-image: url('https://images.pexels.com/photos/225315/pexels-photo-225315.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');">
+                                                        <div class="inner">
+                                  
+                                                        </div>
+                                                    </div>
+                                                    <div class="back-top">
+                                                        <div class="inner">
+                                  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                      <div class="col-xs-12 col-md-12">
+                            <div class="container" style="padding-left:2.5px;">
+                                <div class="front-top" style="background-image: url('https://images.pexels.com/photos/433083/pexels-photo-433083.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                                <div class="back-top">
+                                    <div class="inner">
+              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                       </div>
-                  </div>
-              </div>
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front">
-                          <div class="inner">
-
-                          </div>
-                      </div>
-                      <div class="back">
-                          <div class="inner">
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
+
+              <!-- </div> -->
 
      <div class="wrapper">
 
@@ -59,7 +112,7 @@
 
         <h1 class='midTitle'>Lures</h1>
         <div class="row">
-                <a class="col-xs-12 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
+                <a class="col-xs-12 col-md-4 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
                     <div class="container product">
                         <div class="front" id='{{product.id}}' [style.background-image]='getBackground(product.productImage)'> <!-- angular has protections for variables as product image. must use getBackground to scrub -->
                             <div class="inner">
@@ -69,8 +122,27 @@
                         <div class="back">
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
-                                <p class="price">{{product.productPrice}}</p>
-                                <button (click)='addToCart(product.id)'class="btn btn-primary">Add To Cart</button>
+                                <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
+                                <br>
+                                <form>
+                                    <label for="quantity">Quantity:</label>
+                                    <input 
+                                    #quantity 
+                                    name='quantity' 
+                                    required
+                                    type="number" 
+                                    style='color: black; width: 3em;' 
+                                    OnlyNumber="true" 
+                                    value="1"
+                                    min="1"
+                                    >
+                                    <p *ngIf='errorMsg'>Quantity must be entered</p>
+                                    <br><br>
+                                    <button 
+                                    (click)='checkQuantity(product.id, quantity.value)'
+                                    class="btn btn-primary"
+                                    >Add To Cart</button>
+                                </form>
                             </div>
                         </div>
                     </div>
