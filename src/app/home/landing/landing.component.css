@@ -1,10 +1,11 @@
 .banner {
     
-        width: 85%;
+        width: 81%;
         height: 50%;
-        margin-left: 7.5%;
-        margin-right: 7.5%;
+        margin-left: 9.45%;
+        margin-right: 8.55%;
         margin-top: 2.5%;
+        margin-bottom: 10px;
         padding: 2px 16px;
         display: flex;
         flex-flow: row nowrap;
@@ -140,7 +141,7 @@
           font-size: 1.5rem;
       }
       
-      .back{
+      .back, .back-top{
         background: #cedce7;
         background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
         background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
@@ -163,7 +164,8 @@
           border-radius: 10px;
       }
       .container:hover .front,
-      .container:hover .back{
+      .container:hover .back,
+      .container:hover .back-top,{
           -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
           transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
           -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -171,7 +173,7 @@
           transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
       }
       
-      .back{
+      .back, .back-top{
           position: absolute;
           top: 0;
           left: 0;
@@ -194,7 +196,7 @@
           z-index: 2;
       }
       
-      .container .back{
+      .container .back, .container .back-top{
           -webkit-transform: rotateY(180deg);
                   transform: rotateY(180deg);
           -webkit-transform-style: preserve-3d;
@@ -208,7 +210,7 @@
                   transform-style: preserve-3d;
       }
       
-      .container:hover .back{
+      .container:hover .back, .container:hover .back-top{
         -webkit-transform: rotateY(0deg);
                 transform: rotateY(0deg);
         -webkit-transform-style: preserve-3d;
@@ -300,7 +302,7 @@
 
           
           .front-top,
-          .back{
+          .back-top{
             background-size: cover;
               background-position: center;
               -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -314,7 +316,7 @@
               min-height: 150px;
               height: auto;
               border-radius: 10px;
-              border: 3px solid #0269CD;
+              /* border: 3px solid #0269CD; */
               color: #fff;
               font-size: 1.5rem;
           }
@@ -328,8 +330,8 @@
               height: 100%;
               content: '';
               display: block;
-              opacity: 0;
-              background-color: #000;
+              /* opacity: 0; */
+              /* background-color: #000; */
               -webkit-backface-visibility: hidden;
                       backface-visibility: hidden;
               border-radius: 10px;
