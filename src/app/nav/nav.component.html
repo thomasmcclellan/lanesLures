@@ -21,7 +21,10 @@
       
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a routerLink="/signin">Sign In / Sign Up</a></li>
+          <ng-template [ngIf]="!authService.isAuthenticated()">
+            <li><a routerLink="/signin">Sign In / Sign Up</a></li>
+          </ng-template>
+          <li><a style="cursor: pointer;" (click)="onSignout()" *ngIf="authService.isAuthenticated()">Sign Out</a></li>
         </ul>
       </div>
     </div>
