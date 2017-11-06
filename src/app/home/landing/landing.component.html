@@ -77,7 +77,17 @@
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
                                 <p class="price">{{product.productPrice}}</p>
-                                <input #quantity name='quantity' style='color: black' OnlyNumber="true" />
+                                <label for="quanitity">Quantity:</label>
+                                <input 
+                                  #quantity 
+                                  name='quantity' 
+                                  type="number" 
+                                  style='color: black; width: 3em;' 
+                                  OnlyNumber="true" 
+                                  value="1"
+                                  min="1"
+                                >
+                                <br>
                                 <button (click)='addToCart(product.id, quantity.value)'class="btn btn-primary">Add To Cart</button>
                             </div>
                         </div>
