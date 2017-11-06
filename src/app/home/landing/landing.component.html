@@ -124,22 +124,25 @@
                                 <p class="description">{{product.productDescription}}</p>
                                 <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
                                 <br>
-                                <label for="quantity">Quantity:</label>
-                                <input 
-                                  #quantity 
-                                  name='quantity' 
-                                  type="number" 
-                                  style='color: black; width: 3em;' 
-                                  OnlyNumber="true" 
-                                  value="1"
-                                  min="1"
-                                >
-                                <br><br>
-                                <button 
-                                  (click)='addToCart(product.id, quantity.value)'
-                                  (click)='onSelected()'
-                                  class="btn btn-primary"
-                                >Add To Cart</button>
+                                <form>
+                                    <label for="quantity">Quantity:</label>
+                                    <input 
+                                    #quantity 
+                                    name='quantity' 
+                                    required
+                                    type="number" 
+                                    style='color: black; width: 3em;' 
+                                    OnlyNumber="true" 
+                                    value="1"
+                                    min="1"
+                                    >
+                                    <p *ngIf='errorMsg'>Quantity must be entered</p>
+                                    <br><br>
+                                    <button 
+                                    (click)='checkQuantity(product.id, quantity.value)'
+                                    class="btn btn-primary"
+                                    >Add To Cart</button>
+                                </form>
                             </div>
                         </div>
                     </div>
