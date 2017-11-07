@@ -1,233 +1,233 @@
 <div class="row">
   <h1 style="text-align: center; font-weight: bold;">Guest Checkout</h1>
   <hr>
-<div class='col-xs-6'>
-  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h3 style="text-align: center; font-weight: bold;">Shipping Information</h3>
-    <form>
-      <div class="form-group">
-        <label for="fname">First Name:</label><br>
-        <input 
-          type="text" 
-          name="fname" 
-          id="fname" 
-          [(ngModel)]="fnameValue" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="lname">Last Name:</label><br>
-        <input 
-          type="text" 
-          name="lname" 
-          id="lname" 
-          [(ngModel)]="lnameValue" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="address1">Address 1:</label><br>
-        <input 
-          type="text" 
-          name="address1" 
-          id="address1" 
-          [(ngModel)]="address1Value" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="address2">Address 2:</label><br>
-        <input 
-          type="text" 
-          name="address2" 
-          id="address2" 
-          [(ngModel)]="address2Value"
-          class="form-control"
-        >
-      </div>  
-      <div class="form-group">
-        <label for="city">City:</label><br>
-        <input 
-          type="text" 
-          name="city" 
-          id="city" 
-          [(ngModel)]="cityValue" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="state">State:</label><br>
-        <input 
-          type="text" 
-          name="state" 
-          id="state" 
-          [(ngModel)]="stateValue" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="zip">Zipcode:</label><br>
-        <input 
-          type="number" 
-          name="zip" 
-          id="zip" 
-          [(ngModel)]="zipValue" 
-          required
-          class="form-control"
-        >
-      </div>
-    </form>
-  </div>
+  <div class='col-xs-6'>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <h3 style="text-align: center; font-weight: bold;">Shipping Information</h3>
+      <form>
+        <div class="form-group">
+          <label for="fname">First Name:</label><br>
+          <input 
+            type="text" 
+            name="fname" 
+            id="fname" 
+            [(ngModel)]="fnameValue" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name:</label><br>
+          <input 
+            type="text" 
+            name="lname" 
+            id="lname" 
+            [(ngModel)]="lnameValue" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="address1">Address 1:</label><br>
+          <input 
+            type="text" 
+            name="address1" 
+            id="address1" 
+            [(ngModel)]="address1Value" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="address2">Address 2:</label><br>
+          <input 
+            type="text" 
+            name="address2" 
+            id="address2" 
+            [(ngModel)]="address2Value"
+            class="form-control"
+          >
+        </div>  
+        <div class="form-group">
+          <label for="city">City:</label><br>
+          <input 
+            type="text" 
+            name="city" 
+            id="city" 
+            [(ngModel)]="cityValue" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label><br>
+          <input 
+            type="text" 
+            name="state" 
+            id="state" 
+            [(ngModel)]="stateValue" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="zip">Zipcode:</label><br>
+          <input 
+            type="number" 
+            name="zip" 
+            id="zip" 
+            [(ngModel)]="zipValue" 
+            required
+            class="form-control"
+          >
+        </div>
+      </form>
+    </div>
 
-  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h3 style="text-align: center; font-weight: bold;">Billing Information</h3>
-    <hr>
-    <form>
-      <div class="form-group">
-        <label for="fname">First Name:</label><br>
-        <input 
-          type="text" 
-          name="fname" 
-          id="fname" 
-          value="{{ fnameValue }}" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="lname">Last Name:</label><br>
-        <input 
-          type="text" 
-          name="lname" 
-          id="lname" 
-          value="{{ lnameValue }}" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="address1">Address 1:</label><br>
-        <input 
-          type="text" 
-          name="address1" 
-          id="address1" 
-          value="{{ address1Value }}" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="address2">Address 2:</label><br>
-        <input 
-          type="text" 
-          name="address2" 
-          id="address2" 
-          value="{{ address2Value }}"
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="city">City:</label><br>
-        <input 
-          type="text" 
-          name="city" 
-          id="city" 
-          value="{{ cityValue }}" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="state">State:</label><br>
-        <input 
-          type="text" 
-          name="state" 
-          id="state" 
-          value="{{ stateValue }}" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">           
-        <label for="zip">Zipcode:</label><br>
-        <input 
-          type="number" 
-          name="zip" 
-          id="zip" 
-          value="{{ zipValue }}" 
-          required
-          class="form-control"
-        >
-      </div>
-    </form>
-  </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <h3 style="text-align: center; font-weight: bold;">Billing Information</h3>
+      <hr>
+      <form>
+        <div class="form-group">
+          <label for="fname">First Name:</label><br>
+          <input 
+            type="text" 
+            name="fname" 
+            id="fname" 
+            value="{{ fnameValue }}" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name:</label><br>
+          <input 
+            type="text" 
+            name="lname" 
+            id="lname" 
+            value="{{ lnameValue }}" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="address1">Address 1:</label><br>
+          <input 
+            type="text" 
+            name="address1" 
+            id="address1" 
+            value="{{ address1Value }}" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="address2">Address 2:</label><br>
+          <input 
+            type="text" 
+            name="address2" 
+            id="address2" 
+            value="{{ address2Value }}"
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label><br>
+          <input 
+            type="text" 
+            name="city" 
+            id="city" 
+            value="{{ cityValue }}" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label><br>
+          <input 
+            type="text" 
+            name="state" 
+            id="state" 
+            value="{{ stateValue }}" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">           
+          <label for="zip">Zipcode:</label><br>
+          <input 
+            type="number" 
+            name="zip" 
+            id="zip" 
+            value="{{ zipValue }}" 
+            required
+            class="form-control"
+          >
+        </div>
+      </form>
+    </div>
 
-  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h3 style="text-align: center; font-weight: bold;">Credit Card Information</h3>
-    <hr>
-    <form>
-      <div class="form-group">
-        <label for="name">Full Name:</label><br>
-        <input 
-          type="text" 
-          name="name" 
-          id="name" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="creditCard">CCN:</label><br>
-        <input 
-          type="text" 
-          name="creditCard" 
-          id="creditCard" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="expiration">Expiration Date:</label><br>
-        <input 
-          type="text" 
-          name="expiration"
-          id="expiration" 
-          required
-          class="form-control"
-        >
-      </div>
-      <div class="form-group">
-        <label for="cvv">CVV:</label><br>
-        <input 
-          type="number" 
-          name="cvv" 
-          id="cvv" 
-          required
-          class="form-control"
-        >
-      </div>
-    </form>
-  </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <h3 style="text-align: center; font-weight: bold;">Credit Card Information</h3>
+      <hr>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name:</label><br>
+          <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="creditCard">CCN:</label><br>
+          <input 
+            type="text" 
+            name="creditCard" 
+            id="creditCard" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="expiration">Expiration Date:</label><br>
+          <input 
+            type="text" 
+            name="expiration"
+            id="expiration" 
+            required
+            class="form-control"
+          >
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV:</label><br>
+          <input 
+            type="number" 
+            name="cvv" 
+            id="cvv" 
+            required
+            class="form-control"
+          >
+        </div>
+      </form>
+    </div>
 
-  <div class="col-xs-12">
-    <button 
-      type="submit" 
-      class="btn btn-primary" 
-    >Submit</button>
-    <a routerLink="/checkout">
-      <button
-        type="button"
-        class="btn btn-danger"
-      >Cancel</button>
-    </a>
+    <div class="col-xs-12">
+      <button 
+        type="submit" 
+        class="btn btn-primary" 
+      >Submit</button>
+      <a routerLink="/checkout">
+        <button
+          type="button"
+          class="btn btn-danger"
+        >Cancel</button>
+      </a>
+    </div>
   </div>
-</div>
-<div class='col-xs-6'>
-  <app-cart></app-cart>
-</div>
+  <div class='col-xs-6'>
+    <app-cart></app-cart>
+  </div>
 </div>

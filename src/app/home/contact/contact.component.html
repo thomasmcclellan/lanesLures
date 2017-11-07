@@ -1,16 +1,34 @@
 <div class="container">
-    <h1 style="text-align: center;">Contact Us</h1>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus velit earum rerum voluptates ratione repellendus sunt nisi? Nostrum quidem labore excepturi incidunt id iure atque obcaecati doloremque! Dolorum, illum harum.</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus velit earum rerum voluptates ratione repellendus sunt nisi? Nostrum quidem labore excepturi incidunt id iure atque obcaecati doloremque! Dolorum, illum harum.</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus velit earum rerum voluptates ratione repellendus sunt nisi? Nostrum quidem labore excepturi incidunt id iure atque obcaecati doloremque! Dolorum, illum harum.</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus velit earum rerum voluptates ratione repellendus sunt nisi? Nostrum quidem labore excepturi incidunt id iure atque obcaecati doloremque! Dolorum, illum harum.</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus velit earum rerum voluptates ratione repellendus sunt nisi? Nostrum quidem labore excepturi incidunt id iure atque obcaecati doloremque! Dolorum, illum harum.</p>
-    <br>
-    <br>
-    <p style="text-align: center; padding-left: 25px; padding-right: 25px; font-weight: bold;">“You give a poor man a fish and you feed him for a day. You teach him to fish and you give him an occupation that will feed him for a lifetime.” -Chinese Proverb</p>
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading">Contact Us</h2>
+      <h3 class="section-subheading">We would love to hear from you!</h3>
+    </div>
   </div>
+
+  <div class="row">
+      <div class="col-md-12">
+        <form action="https://formspree.io/angiewashburn1997@gmail.com" method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name" id="name" required data-validation-required-message="Please enter your name" name="name"> 
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email" id="email" required data-validation-required-message="Please enter your email" name="_replyto"> 
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="7" placeholder="Your Message" id="message" required data-validation-required-message="Please leave a message" name="message"></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="text-center">
+              <div id="success"></div>
+              <button id="sendMessageButton" class="btn btn-primary" type="submit">
+                <i class="fa fa-send-o"></i>
+                Send Message
+              </button>
+            </div>
+        </form>
+      </div>
+  </div>
+</div> 
