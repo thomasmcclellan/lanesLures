@@ -17,17 +17,26 @@
               <li><img routerLink='/checkout' class="viewCarting" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-business/080707-glossy-black-icon-business-cart5.png" alt="View Cart"></li>
             </ul>
           </a> -->
-
-          <ng-template [ngIf]="authService.isAuthenticated()">
-            <ul class="nav navbar-nav">
-              <li><a routerLink='/admin'>Admin Dashboard</a></li>
-            </ul>
-          </ng-template>
+          <div class="dropdown" style="margin-top: 8px;">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="fa fa-envelope-o" aria-hidden="true" style="height:18px"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a routerLink='/about'>About Us</a></li>
+                <li><a routerLink='/contact'>Contact Us</a></li>
+                <li><a routerLink='/help'>Help</a></li>
+              </ul>
+            </div>
       </div>
       
       
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
+            <!-- <ul class="nav navbar-nav" *ngIf="isAdmin"> -->
+                <ng-template [ngIf]="authService.isAuthenticated()">
+                  <li *ngIf="isAdmin"><a routerLink='/admin'>Admin Dashboard</a></li>
+                </ng-template>
+              <!-- </ul> -->
           <li><img routerLink='/checkout' class="viewCarting" style="cursor:pointer" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-business/080707-glossy-black-icon-business-cart5.png" alt="View Cart"></li>
           <ng-template [ngIf]="!authService.isAuthenticated()">
             <li><a routerLink="/signin">Sign In / Sign Up</a></li>

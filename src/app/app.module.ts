@@ -24,6 +24,9 @@ import { CartService } from './services/cart.service';
 import { UserCheckoutComponent } from './home/checkout/user-checkout/user-checkout.component';
 import { CartComponent } from './home/cart/cart.component';
 import { OnlyNumber } from './home/landing/number-validator.directive';
+import { AboutComponent } from './home/about/about.component';
+import { HelpComponent } from './home/help/help.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { OnlyNumber } from './home/landing/number-validator.directive';
     GuestCheckoutComponent,
     UserCheckoutComponent,
     CartComponent,
-    OnlyNumber
+    OnlyNumber,
+    AboutComponent,
+    HelpComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
