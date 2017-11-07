@@ -1,3 +1,7 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .navbar-brand {
     transform: translateX(-50%);
     left: 50%;
@@ -32,4 +36,18 @@
 
 .navbar {
   margin-bottom: 0px;
+  border-bottom: 3px solid lightskyblue;
+  background-color: aliceblue;
+  border-radius: 0;
+  width: 100%;
+}
+
+a {
+  color: black !important;
+  font-weight: bold;
+}
+
+a:hover{
+  color: #0269CD !important;
+  font-weight: bold;
 }
