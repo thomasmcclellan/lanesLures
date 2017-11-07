@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { NavbarService } from '../services/nav.service';
-import firebaseConfig from '../../../firebaseConfig'
+import firebaseConfig from '../../../firebaseConfig';
 
 @Component({
   selector: 'app-nav',
@@ -14,12 +14,10 @@ export class NavComponent implements OnInit {
   constructor(private authService: AuthService, public nav: NavbarService) { }
 
   ngOnInit() {
-    console.log('HELLO')
     this.authService.getID()
       .then((uid) => {
         if (uid == firebaseConfig.adminUIDs[0]) {
           this.isAdmin = true;
-          console.log('is admin', this.isAdmin)
         }
       })
   }

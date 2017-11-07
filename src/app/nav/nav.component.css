@@ -51,3 +51,16 @@ a:hover{
   color: #0269CD !important;
   font-weight: bold;
 }
+
+
+
+.dropdown-menu{
+  margin-top: 7px;
+  left: -20px;
+  border: 3px solid lightskyblue;
+  border-top: 0;
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 0;
+  float: left;
+}
