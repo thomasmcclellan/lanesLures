@@ -194,13 +194,14 @@
           position: absolute;
           left: 0;
           width: 100%;
-          padding: 2rem;
+          padding: 1rem;
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
           outline: 1px solid transparent;
           -webkit-perspective: inherit;
                   perspective: inherit;
           z-index: 2;
+          overflow: none;
       }
       
       .container .back, .container .back-top{
@@ -285,6 +286,16 @@
           /* background-color: #0269CD; */
           color: black;
       }
+
+      .topTitle {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: sans-serif;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        /* background-color: #0269CD; */
+        color: black;
+    }
 
       .btn {
         padding: 5px;
