@@ -31,6 +31,7 @@
                     </ng-template>
                   </li>
                 <li><a style="cursor: pointer;" class="dropitem" (click)="onSignout()" *ngIf="authService.isAuthenticated()">Sign Out</a></li>
+                <li><a routerLink='/checkout' class="dropitem">View Cart</a></li>
                 <li><a routerLink='/about' class="dropitem">About Us</a></li>
                 <li><a routerLink='/contact' class="dropitem">Contact Us</a></li>
                 <li><a routerLink='/help' class="dropitem">Help</a></li>
@@ -40,9 +41,9 @@
       
       
       <!-- <div id="navbar" class="navbar-collapse collapse"> -->
-        <ul class="nav navbar-nav navbar-right">
+        <!-- <ul class="nav navbar-nav navbar-right">
           <li><img routerLink='/checkout' class="viewCarting" style="cursor:pointer" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-business/080707-glossy-black-icon-business-cart5.png" alt="View Cart"></li>
-        </ul>
+        </ul> -->
       <!-- </div> -->
     </div>
   </nav>

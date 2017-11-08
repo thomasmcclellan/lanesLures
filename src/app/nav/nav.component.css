@@ -32,10 +32,14 @@
 
 .navbar {
   margin-bottom: 0px;
+  padding-bottom: 1em;
   border-bottom: 3px solid lightskyblue;
   background-color: aliceblue;
   border-radius: 0;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .dropdown-menu{
