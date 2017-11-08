@@ -26,7 +26,7 @@ export class AuthService {
       )
       .catch(
         response => {
-          console.log(response)
+          // console.log(response)
           return ('Email or password is incorrect')
         }
       )
@@ -36,10 +36,10 @@ export class AuthService {
    firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(res=> {
       this.router.navigate(['/home']);      
-      console.log('user created')
+      // console.log('user created')
     })
     .catch(res => {
-      console.log('there was an error with login, ', res)
+      // console.log('there was an error with login, ', res)
     }) 
   }
   signout() {
@@ -51,7 +51,7 @@ export class AuthService {
       )
       .catch(
         response => {
-          console.log(response)
+          // console.log(response)
         }
       )
     this.token = null;
@@ -85,10 +85,10 @@ export class AuthService {
 
   isAdminAuthenticated(uid) {
     if (uid == firebaseConfig.adminUIDs[0]){ 
-      console.log('true')
+      // console.log('true')
       return true
     } else {
-      console.log('false')
+      // console.log('false')
       this.router.navigate(['home'])      
       return null;
     }
