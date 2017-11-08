@@ -1,20 +1,22 @@
-<div class="row">
-  <div class="col-xs-12" >
-    <div style='margin-bottom: 10px' *ngFor='let cartItem of cart' class='row' id='{{cartItem.id}}'> <!-- angular has protections for variables as product image. must use getBackground to scrub -->
-      <div class='col-xs-3'>
-        <img class='cartImage' src={{cartItem.productImage}}/>
+<div class="container" style="width: 450px;">
+  <div class="row">
+    <div class="col-xs-12" >
+      <div style='margin-bottom: 10px' *ngFor='let cartItem of cart' class='row' id='{{cartItem.id}}'> <!-- angular has protections for variables as product image. must use getBackground to scrub -->
+        <div class='col-xs-3'>
+          <img class='cartImage' src={{cartItem.productImage}}/>
+        </div>
+        <div class='col-xs-7'>
+              <p class="lureName">{{cartItem.productName}}</p>
+              <p class="price">{{cartItem.productPrice  | currency:'USD':true:'1.2-2'}} each</p>
+              <p>Quantity: {{cartItem.quantity}}</p>
+        </div>
+        <div class='col-xs-2'>
+          <p>{{cartItem.thisItemTotal  | currency:'USD':true:'1.2-2'}}</p>  
+        </div>    
       </div>
-      <div class='col-xs-7'>
-            <p class="lureName">{{cartItem.productName}}</p>
-            <p class="price">{{cartItem.productPrice  | currency:'USD':true:'1.2-2'}} each</p>
-            <p>Quantity: {{cartItem.quantity}}</p>
-      </div>
-      <div class='col-xs-2'>
-        <p>{{cartItem.thisItemTotal  | currency:'USD':true:'1.2-2'}}</p>  
-      </div>    
     </div>
-  </div>
-  <div class='col-xs-12'>
-    <p style='text-align: center; font-weight: bold;'>Total: {{total | currency:'USD':true: '1.2-2'}}</p>
+    <div class='col-xs-12'>
+      <p style='text-align: center; font-weight: bold;'>Total: {{total | currency:'USD':true: '1.2-2'}}</p>
+    </div>
   </div>
 </div>
