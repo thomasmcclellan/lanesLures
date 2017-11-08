@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
   }
 
   filepick(what) {
-    console.log('trash')
+    // console.log('trash')
     
   }
 

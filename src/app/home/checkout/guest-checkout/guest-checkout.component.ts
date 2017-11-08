@@ -11,7 +11,7 @@ export class GuestCheckoutComponent implements OnInit {
 
   ngOnInit() {
     this.cart = JSON.parse(sessionStorage.getItem('cart'))
-    console.log('this cart ', this.cart)
+    // console.log('this cart ', this.cart)
   }
 
 }
