@@ -2,3 +2,33 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+.buttinos {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button-blue{
+  border: 1px solid lightskyblue;
+  background-color: #0269CD;
+  color: white;
+}
+
+.button-blue:hover{
+  border: 1px solid lightskyblue;
+  background-color: rgb(0, 73, 141);
+  color: white;
+}
+
+.button-red{
+  border: 1px solid lightcoral;
+  background-color: rgb(206, 50, 50);
+  color: white;
+}
+
+.button-red:hover{
+  border: 1px solid lightcoral;
+  background-color: rgb(148, 36, 36);
+  color: white;
+}

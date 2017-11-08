@@ -16,7 +16,7 @@
             <ng-template [ngIf]="authService.isAuthenticated()">
               <a routerLink="/checkout/user-checkout">
                 <button 
-                  class="btn btn-primary" 
+                  class="btn btn-primary button-blue" 
                   type="button"
                 >User Checkout</button>
               </a>
@@ -24,26 +24,11 @@
             <ng-template [ngIf]="!authService.isAuthenticated()">
               <a routerLink="/signin">
                 <button 
-                  class="btn btn-primary dropdown-toggle" 
+                  class="btn btn-primary dropdown-toggle button-blue" 
                   type="button"
                 >Sign In</button>
               </a>
             </ng-template>
-
-            <div class="modal fade" id="userModal" role="dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h1 class="modal-title" style="font-weight: bold">User Signin</h1>
-                </div>
-                <div class="modal-body">
-                  <app-signin></app-signin>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <br>
@@ -53,7 +38,7 @@
         <h2 style="text-align: center; font-weight: bold;">Checkout as Guest</h2>  
         <hr>
         <div style="text-align: center;">
-          <a routerLink='guest-checkout'><button class="btn btn-primary" type="button">Guest Checkout</button></a>
+          <a routerLink='guest-checkout'><button class="btn btn-primary button-blue" type="button">Guest Checkout</button></a>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     this.cart = JSON.parse(sessionStorage.getItem('cart'))
     this.total = this.cart.map(item => item.thisItemTotal).reduce((a, b) => a + b, 0)
-    console.log(this.total)
+    // console.log(this.total)
   }
 
 }

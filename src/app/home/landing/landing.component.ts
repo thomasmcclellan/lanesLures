@@ -30,7 +30,7 @@ export class LandingComponent implements OnInit {
     
     numInputs.forEach(function (input) {
       input.addEventListener('change', function (e) {
-        console.log('doesn\'t work')
+        // console.log('doesn\'t work')
         if ((<HTMLTextAreaElement>e.target).value == '') {
           (<HTMLTextAreaElement>e.target).value = '0'
         }
