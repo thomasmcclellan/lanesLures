@@ -2,6 +2,11 @@
   margin-top: 5em;
   border: 2px solid blue;
   margin-bottom: 100px;
+  margin-top: 5em;
+}
+
+.container {
+  margin-top: 5em;
 }
 
 .userCheckout {
