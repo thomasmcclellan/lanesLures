@@ -1,5 +1,6 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 100;
 }
 
 .body { 
@@ -8,7 +9,7 @@
 
 .footer {
     background-color: #0269CD;
-    padding: 5px;
+    padding: 3px;
     color: white;
     border-top: 3px solid lightskyblue;
     position: fixed;
@@ -18,7 +19,7 @@
 }
 
 .footer-text-left {
-    font-size: 18px;
+    font-size: 13px;
     margin-top: 7px;
 }
 
@@ -28,5 +29,19 @@
 }
 
 .footerLinks{
+    margin-top: 5px;
     height: 40px;
+}
+
+.fishy {
+    height: 30px;
+    background-color: aliceblue;
+    border: 1px solid white;
+}
+
+
+.fishy:hover {
+    height: 30px;
+    background-color: lightskyblue;
+    border: 1px solid aliceblue;
 }
