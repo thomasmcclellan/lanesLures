@@ -91,6 +91,7 @@ h1{
 .wrapper{
   width: 85%;
   margin: 0 auto;
+  margin-bottom: 200px;
   /* background-color: lightskyblue; */
 }
 
