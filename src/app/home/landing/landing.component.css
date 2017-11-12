@@ -505,3 +505,160 @@ h1{
             background-color: rgb(0, 73, 141);
             color: white;
           }
+
+
+
+
+
+          div.fadecards:hover{
+        
+            -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: fadein 4s; /* Firefox < 16 */
+                -ms-animation: fadein 4s; /* Internet Explorer */
+                 -o-animation: fadein 4s; /* Opera < 12.1 */
+                    animation: fadein 4s;
+        }
+        
+        
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        
+        /* Firefox < 16 */
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        
+        /* Safari, Chrome and Opera > 12.1 */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        
+        /* Opera < 12.1 */
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+
+        .pic1 {
+          background-image: url('https://images.pexels.com/photos/102730/pexels-photo-102730.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+          height: 100%;
+          width: 100%;
+          background-size: cover;
+          background-position: center;
+          min-height: 150px;
+       }
+       
+       .pic1:hover {
+          background-image: url('https://goo.gl/F5kc4B');
+          -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+          -moz-animation: fadein 3s; /* Firefox < 16 */
+           -ms-animation: fadein 3s; /* Internet Explorer */
+            -o-animation: fadein 3s; /* Opera < 12.1 */
+               animation: fadein 3s;
+       }
+
+       
+
+       .pic2 {
+        background-image: url('https://images.pexels.com/photos/192454/pexels-photo-192454.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        min-height: 150px;
+     }
+     
+     .pic2:hover {
+        background-image: url('https://goo.gl/N9k5BL');
+        -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 3s; /* Firefox < 16 */
+         -ms-animation: fadein 3s; /* Internet Explorer */
+          -o-animation: fadein 3s; /* Opera < 12.1 */
+             animation: fadein 3s;
+     }
+
+     
+     .pic3 {
+      background-image: url('https://images.pexels.com/photos/386003/pexels-photo-386003.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      min-height: 150px;
+   }
+   
+   .pic3:hover {
+      background-image: url('https://goo.gl/LZx9oo');
+      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 3s; /* Firefox < 16 */
+       -ms-animation: fadein 3s; /* Internet Explorer */
+        -o-animation: fadein 3s; /* Opera < 12.1 */
+           animation: fadein 3s;
+   }
+
+   
+   .pic4 {
+    background-image: url('https://images.pexels.com/photos/54580/fishing-sunset-british-columbia-catching-fish-54580.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+ }
+ 
+ .pic4:hover {
+    background-image: url('https://goo.gl/QqyvPk');
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+     -ms-animation: fadein 3s; /* Internet Explorer */
+      -o-animation: fadein 3s; /* Opera < 12.1 */
+         animation: fadein 3s;
+ }
+
+ .pic5 {
+  background-image: url('https://images.pexels.com/photos/225315/pexels-photo-225315.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 150px;
+}
+
+.pic5:hover {
+  background-image: url('http://i2.wp.com/laneslures.com/wp-content/uploads/2017/06/fullsizeoutput_47b.jpeg?resize=400%2C400../../../assets/homepage.png');
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+   -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+       animation: fadein 3s;
+}
+
+
+.pic6 {
+  background-image: url('https://images.pexels.com/photos/433083/pexels-photo-433083.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 150px;
+}
+
+.pic6:hover {
+  background-image: url('http://i2.wp.com/laneslures.com/wp-content/uploads/2017/10/fullsizeoutput_1fa4.jpeg?resize=400%2C400');
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+   -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+       animation: fadein 3s;
+}
