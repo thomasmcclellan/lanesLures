@@ -65,14 +65,14 @@
   height: 100%;
   width: 100%;
   perspective: 500px;
-  overflow: none;
+  overflow: hidden;
 }
 
 .product {
   padding: 10px;
   /* border: 2px solid black; */
   height: 470px;
-  overflow: none;
+  overflow: hidden;
 }
 
 
@@ -187,7 +187,7 @@ h1{
   outline: 1px solid transparent;
   -webkit-perspective: inherit;
           perspective: inherit;
-  overflow: none;
+  overflow: hidden;
 }
 
 .front .inner p{
