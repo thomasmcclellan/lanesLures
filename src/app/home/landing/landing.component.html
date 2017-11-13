@@ -1,11 +1,54 @@
-<img class="banner" src="../../../assets/images/homepage.png">
+<!-- <img class="banner" src="../../../assets/images/homepage.png"> -->
 
-<!-- <div class="container">
-    <div class="banner" style="height: 305px; background-image: url('../../../assets/images/homepage.png');">
-        <div class="inner"></div>
-        eyo
+<div class="banner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+  
+        <div class="item active">
+          <img src="../../../assets/images/homepage.png">
+          <div class="carousel-caption">
+            <!-- <h3>Los Angeles</h3>
+            <p>LA is always so much fun!</p> -->
+          </div>
+        </div>
+  
+        <div class="item">
+          <img src="https://goo.gl/4bkUXi" style="height: 440px; width: 100%;">
+          <div class="carousel-caption">
+            <!-- <h3>Chicago</h3>
+            <p>Thank you, Chicago!</p> -->
+          </div>
+        </div>
+      
+        <div class="item">
+          <img src="https://goo.gl/DFErfn" style="height: 440px; width: 100%;">
+          <div class="carousel-caption">
+            <!-- <h3>New York</h3>
+            <p>We love the Big Apple!</p> -->
+          </div>
+        </div>
+    
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <!-- <span class="fa fa-arrow-left"></span> -->
+        <!-- <span class="sr-only">Previous</span> -->
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <!-- <span class="fa fa-arrow-right"></span> -->
+        <!-- <span class="sr-only">Next</span> -->
+      </a>
     </div>
-</div> -->
+  </div>
 
 
 <div class="wrapper-top">
@@ -56,22 +99,22 @@
 
 
 
-     <div class="wrapper">
+     <!-- <div class="wrapper">
 
         <div class="jumbotron">
             <p class="jumbotron-text">Send in a picture of yourself fishing with one of our lures and we will send you a free lure!</p>
         </div>
 
         <h1 class='midTitle'>Our Lures</h1>
-        <div class="row">
-                <a class="col-xs-12 col-md-4 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
-                    <div class="container product">
-                        <div class="front" id='{{product.id}}' [style.background-image]='getBackground(product.productImage)'> <!-- angular has protections for variables as product image. must use getBackground to scrub -->
-                            <div class="inner">
-                                <p class="lureName">{{product.productName}}</p>
-                            </div>
-                        </div>
-                        <div class="back">
+        <div class="row"> -->
+                <!-- <a class="col-xs-12 col-md-4 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'> -->
+                    <!-- <div class="container product"> -->
+                        <!-- <div class="front" id='{{product.id}}' [style.background-image]='getBackground(product.productImage)'> angular has protections for variables as product image. must use getBackground to scrub -->
+                            <!-- <div class="inner"> -->
+                                <!-- <p class="lureName">{{product.productName}}</p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <div class="back">
                             <div class="inner">
                                 <p class="description">{{product.productDescription}}</p>
                                 <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
@@ -94,11 +137,55 @@
                                     (click)='checkQuantity(product.id, quantity.value)'
                                     class="btn btn-primary button-blue"
 
-                                    >Add To Cart</button>
-                                </form>
+                                    >Add To Cart</button> -->
+                                <!-- </form>
                             </div>
                         </div>
                     </div>
                 </a>
         </div>
-    </div>
+    </div> -->
+
+
+
+
+    <div class="wrapper">
+        
+                <div class="jumbotron">
+                    <p class="jumbotron-text">Send in a picture of yourself fishing with one of our lures and we will send you a free lure!</p>
+                </div>
+        
+                <h1 class='midTitle'>Our Lures</h1>
+                <div class="row">
+                        <a class="col-xs-12 col-md-4 col-sm-6 col-lg-3" ontouchstart="this.classList.toggle('hover');" *ngFor='let product of products'>
+                            <div class="container product">
+                                <div class="front" id='{{product.id}}' [style.background-image]='getBackground(product.productImage)'></div>
+                                <div class="inner">
+                                    <p class="description">{{product.productDescription}}</p>
+                                    <p class="price">{{product.productPrice | currency:'USD':true:'1.2-2'}}</p>
+                                    <br>
+                                    <form>
+                                        <label for="quantity">Quantity:</label>
+                                        <input 
+                                        #quantity 
+                                        name='quantity' 
+                                        required
+                                        type="number" 
+                                        style='color: black; width: 3em;' 
+                                        OnlyNumber="true" 
+                                        value="1"
+                                        min="1"
+                                        >
+                                        <p *ngIf='errorMsg'>Quantity must be entered</p>
+                                        <br><br>
+                                        <button 
+                                        (click)='checkQuantity(product.id, quantity.value)'
+                                        class="btn btn-primary button-blue"
+    
+                                        >Add To Cart</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+            </div>
