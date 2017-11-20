@@ -17,11 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [   // :enter is alias to 'void => *'
-        style({opacity:0}),
-        animate(500, style({opacity:1}))
+        style({opacity: 0}),
+        animate(500, style({opacity: 1}))
       ]),
       transition(':leave', [   // :leave is alias to '* => void'
-        animate(500, style({opacity:0}))
+        animate(500, style({opacity: 0}))
       ])
     ])
   ]
@@ -37,8 +37,8 @@ export class LandingComponent implements OnInit {
   homeImage1Src: string;
   homeImage2Src: string;
   homeImage3Src: string;
-  homeImage4Src;
-  homeImage5Src;
+  homeImage4Src: string;
+  homeImage5Src: string;
   homeImage6Src: string;
   homeImage7Src: string;
   homeImage8Src: string;
@@ -106,14 +106,15 @@ export class LandingComponent implements OnInit {
   constructor(private dataStorageService: DataStorageService, public sanitizer: DomSanitizer, private cartService: CartService, private contentService: ContentService) {
     // Pull updated content from Firebase
     this.getContent();
-    // If there is a current user
+    // If there is a current user with a uid
     if (firebase.auth().currentUser && firebase.auth().currentUser.uid) {
       const thisSaved = this;
+      // Query Firebase to see if the current user is on the approved Admin list
       firebase.database().ref('/isAdmin').once('value').then(function (isAdminTable) {
         const arrayOfAdmins = isAdminTable.val();
+        // If the array of admins includes the current user's uid, set our isAdmin variable to true, otherwise it will be false
         thisSaved.isAdmin = arrayOfAdmins.hasOwnProperty(firebase.auth().currentUser.uid);
-        console.log('isAdmin is:');
-        console.log(thisSaved.isAdmin);
+        // *Note: Does not work for page refreshes, only first login & redirect.
       });
     }
   }
