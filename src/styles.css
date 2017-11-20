@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Admin view, each image upload form */
+.imageUploadingForm {
+  padding: 5rem;
+  padding-left: 5rem;
+  border: 4px solid gray;
+  margin: -2px;
+}
+.imageUploadingForm:first-of-type {
+  margin-left: 2px;
+}
+.uploadImageButton {
+  background-color: #785c44;
+  color: #bcb1ac;
+  outline:0;
+}
+.uploadImageButton:hover, .uploadImageButton:active, .uploadImageButton:focus {
+  background-color: #4E2E28 !important;
+  color: #bcb1ac !important;
+}

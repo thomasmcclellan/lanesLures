@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -27,6 +28,7 @@ import { OnlyNumber } from './home/landing/number-validator.directive';
 import { AboutComponent } from './home/about/about.component';
 import { HelpComponent } from './home/help/help.component';
 import { ContactComponent } from './home/contact/contact.component';
+import { ContentService } from './services/content.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { ContactComponent } from './home/contact/contact.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AuthService,
@@ -61,9 +64,10 @@ import { ContactComponent } from './home/contact/contact.component';
     AuthNullGuard,
     DataStorageService,
     NavbarService,
-    CartService
+    CartService,
+    ContentService
   ],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }
