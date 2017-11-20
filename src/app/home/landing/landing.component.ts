@@ -32,7 +32,7 @@ export class LandingComponent implements OnInit {
   cart
   errorMsg: boolean
   // Defines variables for admins to be able to update images.
-  isAdmin = true;
+  isAdmin = false;
   homeCurrentUpload: Image;
   homeImage1Src: string;
   homeImage2Src: string;
