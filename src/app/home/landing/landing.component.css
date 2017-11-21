@@ -1,14 +1,19 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .banner {
   width: 81%;
-  height: 50%;
-  margin-left: 9.45%;
-  margin-right: 8.55%;
-  margin-top: 110px;
-  margin-bottom: 2px;
+  height: 40%;
+  margin-top: 110px !important;
   padding: 2px 16px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
 }
 
 .jumbotron {
@@ -99,23 +104,22 @@ h1 {
 }
 
 .wrapper-top {
-  width: 90%;
+  width: 79%;  
   margin: 0 auto;
-  /* display: flex; */
-  /* background-color: lightskyblue; */
+  justify-content: center;
 }
 
 .cols {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+
+.media { 
+  min-width: 0;
+  margin: 5px;
+  }
 
 .col {
   width: calc(25% - 2rem);
@@ -479,3 +483,126 @@ div.fadecards:hover {
 .description {
   font-size: 18px;
 }
+
+.imagestop1 {
+  width: 40%;
+  height: 200px;
+  margin: 2px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.imagestop2 {
+  width: 29%;
+  height: 200px;
+  margin: 2px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.imagestop3 {
+  width: 29%;
+  height: 200px;
+  margin: 2px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.imagestop4 {
+  width: 40%;
+  height: 200px;
+  margin: 2px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.imagestop5 {
+  width: 29%;
+  height: 200px;
+  margin: 2px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.imagestop6 {
+  width: 29%;
+  height: 200px;
+  margin: 2px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+@media (max-width: 600px) {
+
+  .banner {
+    width: 100%;
+    height: 40%;
+    margin-top: 110px !important;
+    padding: 2px 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .imagestop1, .imagestop2, .imagestop3, .imagestop4, .imagestop5, .imagestop6 {
+    width: 100%;
+    height: 200px;
+    margin: 2px;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
+  }
+
+}
+
+
+@media (max-width: 1250px) and (min-width: 756px) {
+  
+    .banner {
+      width: 100%;
+      height: 40%;
+      margin-top: 110px !important;
+      padding: 2px 16px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin: 0 auto;
+    }
+  
+    .imagestop1, .imagestop2, .imagestop3, .imagestop4, .imagestop5, .imagestop6 {
+      width: 49%;
+      height: 200px;
+      margin: 2px;
+      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 3s; /* Firefox < 16 */
+      -ms-animation: fadein 3s; /* Internet Explorer */
+      -o-animation: fadein 3s; /* Opera < 12.1 */
+      animation: fadein 3s;
+    }
+  
+  }

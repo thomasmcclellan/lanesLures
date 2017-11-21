@@ -30,3 +30,528 @@
     </form>
   </div>
 </div>
+
+<br>
+
+
+<!-- If yes admin, show form to update image -->
+<div *ngIf="isAdmin">
+  
+  
+  
+    <!-- Image 1 and 2 update form -->
+    <div class="row">
+  
+      <!-- Image1 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage1Src">
+        <label for="homeImage1Existing">Existing Image:</label>
+        <img *ngIf="homeImage1Src" id="homeImage1Existing" style="width: 100px; height: auto" [src]="homeImage1Src" [alt]="homeImage1Description">
+        <br>
+        <br>
+        <label for="homeImage1FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage1FileInput" (change)="homeDetectImage1($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage1Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage1Description" placeholder="description" [(ngModel)]="homeImage1Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage1()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage1">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image2 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage2Src">
+        <label for="homeImage2Existing">Existing Image:</label>
+        <img *ngIf="homeImage2Src" id="homeImage2Existing" style="width: 100px; height: auto" [src]="homeImage2Src" [alt]="homeImage2Description">
+        <br>
+        <br>
+        <label for="homeImage2FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage2FileInput" (change)="homeDetectImage2($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage2Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage2Description" placeholder="description" [(ngModel)]="homeImage2Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage2()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage2">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 1 and 2 -->
+  
+  
+  
+    <!-- Image 3 and 4 update form -->
+    <div class="row">
+  
+      <!-- Image3 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage3Src">
+        <label for="homeImage3Existing">Existing Image:</label>
+        <img *ngIf="homeImage3Src" id="homeImage3Existing" style="width: 100px; height: auto" [src]="homeImage3Src" [alt]="homeImage3Description">
+        <br>
+        <br>
+        <label for="homeImage3FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage3FileInput" (change)="homeDetectImage3($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage3Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage3Description" placeholder="description" [(ngModel)]="homeImage3Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage3()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage3">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image4 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage4Src">
+        <label for="homeImage4Existing">Existing Image:</label>
+        <img *ngIf="homeImage4Src" id="homeImage4Existing" style="width: 100px; height: auto" [src]="homeImage4Src" [alt]="homeImage4Description">
+        <br>
+        <br>
+        <label for="homeImage4FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage4FileInput" (change)="homeDetectImage4($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage4Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage4Description" placeholder="description" [(ngModel)]="homeImage4Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage4()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage4">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 3 and 4 -->
+  
+  
+  
+    <!-- Image 5 and 6 update form -->
+    <div class="row">
+  
+      <!-- Image5 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage5Src">
+        <label for="homeImage5Existing">Existing Image:</label>
+        <img *ngIf="homeImage5Src" id="homeImage5Existing" style="width: 100px; height: auto" [src]="homeImage5Src" [alt]="homeImage5Description">
+        <br>
+        <br>
+        <label for="homeImage5FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage5FileInput" (change)="homeDetectImage5($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage5Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage5Description" placeholder="description" [(ngModel)]="homeImage5Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage5()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage5">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image6 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage6Src">
+        <label for="homeImage6Existing">Existing Image:</label>
+        <img *ngIf="homeImage6Src" id="homeImage6Existing" style="width: 100px; height: auto" [src]="homeImage6Src" [alt]="homeImage6Description">
+        <br>
+        <br>
+        <label for="homeImage6FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage6FileInput" (change)="homeDetectImage6($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage6Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage6Description" placeholder="description" [(ngModel)]="homeImage6Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage6()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage6">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 5 and 6 -->
+  
+  
+  
+    <!-- Image 7 and 8 update form -->
+    <div class="row">
+  
+      <!-- Image7 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage7Src">
+        <label for="homeImage7Existing">Existing Image:</label>
+        <img *ngIf="homeImage7Src" id="homeImage7Existing" style="width: 100px; height: auto" [src]="homeImage7Src" [alt]="homeImage7Description">
+        <br>
+        <br>
+        <label for="homeImage7FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage7FileInput" (change)="homeDetectImage7($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage7Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage7Description" placeholder="description" [(ngModel)]="homeImage7Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage7()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage7">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image8 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage8Src">
+        <label for="homeImage8Existing">Existing Image:</label>
+        <img *ngIf="homeImage8Src" id="homeImage8Existing" style="width: 100px; height: auto" [src]="homeImage8Src" [alt]="homeImage8Description">
+        <br>
+        <br>
+        <label for="homeImage8FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage8FileInput" (change)="homeDetectImage8($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage8Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage8Description" placeholder="description" [(ngModel)]="homeImage8Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage8()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage8">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 7 and 8 -->
+  
+  
+  
+    <!-- Image 9 and 10 update form -->
+    <div class="row">
+  
+      <!-- Image9 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage9Src">
+        <label for="homeImage9Existing">Existing Image:</label>
+        <img *ngIf="homeImage9Src" id="homeImage9Existing" style="width: 100px; height: auto" [src]="homeImage9Src" [alt]="homeImage9Description">
+        <br>
+        <br>
+        <label for="homeImage9FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage9FileInput" (change)="homeDetectImage9($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage9Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage9Description" placeholder="description" [(ngModel)]="homeImage9Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage9()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage9">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image10 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage10Src">
+        <label for="homeImage10Existing">Existing Image:</label>
+        <img *ngIf="homeImage10Src" id="homeImage10Existing" style="width: 100px; height: auto" [src]="homeImage10Src"
+          [alt]="homeImage10Description">
+        <br>
+        <br>
+        <label for="homeImage10FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage10FileInput" (change)="homeDetectImage10($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage10Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage10Description" placeholder="description" [(ngModel)]="homeImage10Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage10()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage10">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 9 and 10 -->
+  
+  
+  
+    <!-- Image 11 and 12 update form -->
+    <div class="row">
+  
+      <!-- Image11 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage11Src">
+        <label for="homeImage11Existing">Existing Image:</label>
+        <img *ngIf="homeImage11Src" id="homeImage11Existing" style="width: 100px; height: auto" [src]="homeImage11Src"
+          [alt]="homeImage11Description">
+        <br>
+        <br>
+        <label for="homeImage11FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage11FileInput" (change)="homeDetectImage11($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage11Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage11Description" placeholder="description" [(ngModel)]="homeImage11Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage11()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage11">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image12 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage12Src">
+        <label for="homeImage12Existing">Existing Image:</label>
+        <img *ngIf="homeImage12Src" id="homeImage12Existing" style="width: 100px; height: auto" [src]="homeImage12Src"
+          [alt]="homeImage12Description">
+        <br>
+        <br>
+        <label for="homeImage12FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage12FileInput" (change)="homeDetectImage12($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage12Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage12Description" placeholder="description" [(ngModel)]="homeImage12Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage12()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage12">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 11 and 12 -->
+  
+  
+  
+    <!-- Image 13 and 14 update form -->
+    <div class="row">
+  
+      <!-- Image13 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage13Src">
+        <label for="homeImage13Existing">Existing Image:</label>
+        <img *ngIf="homeImage13Src" id="homeImage13Existing" style="width: 100px; height: auto" [src]="homeImage13Src"
+          [alt]="homeImage13Description">
+        <br>
+        <br>
+        <label for="homeImage13FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage13FileInput" (change)="homeDetectImage13($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage13Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage13Description" placeholder="description" [(ngModel)]="homeImage13Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage13()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage13">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+      <!-- Image14 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage14Src">
+        <label for="homeImage14Existing">Existing Image:</label>
+        <img *ngIf="homeImage14Src" id="homeImage14Existing" style="width: 100px; height: auto" [src]="homeImage14Src"
+          [alt]="homeImage14Description">
+        <br>
+        <br>
+        <label for="homeImage14FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage14FileInput" (change)="homeDetectImage14($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage14Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage14Description" placeholder="description" [(ngModel)]="homeImage14Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage14()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage14">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 13 and 14 -->
+  
+  
+  
+    <!-- Image 15 and (null) update form -->
+    <div class="row">
+  
+      <!-- Image15 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="homeImage15Src">
+        <label for="homeImage15Existing">Existing Image:</label>
+        <img *ngIf="homeImage15Src" id="homeImage15Existing" style="width: 100px; height: auto" [src]="homeImage15Src"
+          [alt]="homeImage15Description">
+        <br>
+        <br>
+        <label for="homeImage15FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="homeImage15FileInput" (change)="homeDetectImage15($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="homeImage15Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="homeImage15Description" placeholder="description" [(ngModel)]="homeImage15Description">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton button-blue" (click)="homeUploadImage15()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="homeUploadingImage15">
+          <br>
+          <p>Progress: {{homeCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ homeCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+  
+    </div>
+    <!-- End of row for updating images 15 and (null) -->
+  
+  
+  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  
+  
+  
+  </div>
+  <!-- End of isAdmin section -->
+  
